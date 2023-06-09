@@ -1,6 +1,8 @@
 body {
 	padding: 0;
+	/* margin: 0 40px 0 40px; */
 	margin: 0;
+	height: 100%;
 	line-height: 1.5;
 	color: #fff;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,13 +14,25 @@ h1, h2, h3, h4, h5, h6, ul, li, a {
 	padding: 0;
 }
 
-.container {
-	width: 1235px;
-	margin: 0 auto;
+* {
+    box-sizing: border-box;
 }
 
-.home {
+.container {
+	max-width: 1235px;
+	margin: 0 auto;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* .section {
+	flex: 1 1 auto;
+} */
+
+.body {
 	background: url(../img/bg.png) no-repeat top center / cover;
+	background-attachment: fixed;  
 	height: 100vh;
 }
 
@@ -69,13 +83,18 @@ nav {
 	border: solid  3px #7cc411;
 } 
 
-.offer h1 {
-	padding-top: 195px;
+main {
+	padding: 4rem;
+	min-height: calc(100vh - 60px); 
+}
+
+.home h1 {
+	margin-top: 20vh;
 	font-size: 6rem;
 	font-weight: 400;
 }
 
-.offer h2 {
+.home h2 {
 	font-weight: 400;
 	line-height: 1.5;
 	padding: 0.2rem 1rem;
@@ -83,22 +102,22 @@ nav {
 	margin-bottom: 2rem;
 }
 
-.offer span {
+.home span {
 	color: #7cc411;
 }
 
-/*menu*/
+/*.active {
+	color: #7cc411;
+}*/
 
-header {
-	display: flex;
-	justify-content: flex-end;
-}
+/*menu*/
 
 .menu-btn {
 	top: 35px;
+	right: 35px;
 	width: 30px;
 	height: 30px;
-	position: relative;
+	position: absolute;
 	z-index:2;
 	overflow: hidden;
 }
@@ -264,9 +283,10 @@ footer {
 	text-align: center;
 	background-color: #2b2b2b;
     padding: 1rem;
-    margin-top: 4rem;
 	color: #fff;
-	height: 35px;
+	min-height: 100%;
+	width: 100%;
+	line-height: 1.5;
 }
 
 /*work*/
@@ -294,7 +314,7 @@ footer {
 
 .item img {
     height: 170px; 
-    width: 98.5%;
+    width: 100%;
 }
 
 .btn, .btn-dark, .btn-light {

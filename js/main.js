@@ -8,4 +8,3 @@ menuBtn.addEventListener('click', function(){
 	logo.classList.toggle('active');
 })
 
-
